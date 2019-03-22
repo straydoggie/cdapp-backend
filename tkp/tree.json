@@ -1,0 +1,321 @@
+[
+    {
+        "title": "NAIP",
+        "branches": [
+            {
+                "title": "细则",
+                "branches": []
+            },
+            {
+                "title": "航图",
+                "branches": []
+            }
+        ]
+    },
+    {
+        "title": "协议",
+        "branches": [
+            {
+                "title": "管制中心",
+                "branches": [
+                    {
+                        "title": "塔台",
+                        "branches": []
+                    },
+                    {
+                        "title": "区管",
+                        "branches": []
+                    },
+                    {
+                        "title": "其他",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "空军",
+                "branches": [
+                    {
+                        "title": "温江",
+                        "branches": []
+                    },
+                    {
+                        "title": "邛崃",
+                        "branches": []
+                    },
+                    {
+                        "title": "太平寺",
+                        "branches": []
+                    },
+                    {
+                        "title": "夹江",
+                        "branches": []
+                    },
+                    {
+                        "title": "凤凰山",
+                        "branches": []
+                    },
+                    {
+                        "title": "成空",
+                        "branches": []
+                    },
+                    {
+                        "title": "其他空军",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "飞院",
+                "branches": [
+                    {
+                        "title": "广汉",
+                        "branches": []
+                    },
+                    {
+                        "title": "新津",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "通航",
+                "branches": [
+                    {
+                        "title": "西林",
+                        "branches": []
+                    },
+                    {
+                        "title": "驼峰",
+                        "branches": []
+                    },
+                    {
+                        "title": "川协",
+                        "branches": []
+                    },
+                    {
+                        "title": "路正",
+                        "branches": []
+                    },
+                    {
+                        "title": "三星",
+                        "branches": []
+                    },
+                    {
+                        "title": "西华",
+                        "branches": []
+                    },
+                    {
+                        "title": "豪芸",
+                        "branches": []
+                    },
+                    {
+                        "title": "翔云",
+                        "branches": []
+                    },
+                    {
+                        "title": "其他通航",
+                        "branches": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "手册",
+        "branches": [
+            {
+                "title": "应急",
+                "branches": [
+                    {
+                        "title": "设备故障",
+                        "branches": []
+                    },
+                    {
+                        "title": "航空器特情",
+                        "branches": []
+                    },
+                    {
+                        "title": "升空物/无人机",
+                        "branches": []
+                    },
+                    {
+                        "title": "其他应急",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "运行",
+                "branches": []
+            },
+            {
+                "title": "培训",
+                "branches": []
+            },
+            {
+                "title": "行政",
+                "branches": []
+            },
+            {
+                "title": "手册其他章节",
+                "branches": []
+            }
+        ]
+    },
+    {
+        "title": "设备",
+        "branches": [
+            {
+                "title": "INDRA",
+                "branches": [
+                    {
+                        "title": "设备操作",
+                        "branches": []
+                    },
+                    {
+                        "title": "应急",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "二所",
+                "branches": [
+                    {
+                        "title": "设备操作",
+                        "branches": []
+                    },
+                    {
+                        "title": "应急",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "F内话",
+                "branches": [
+                    {
+                        "title": "设备操作",
+                        "branches": []
+                    },
+                    {
+                        "title": "应急",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "S内话",
+                "branches": [
+                    {
+                        "title": "设备操作",
+                        "branches": []
+                    },
+                    {
+                        "title": "应急",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "其他设备",
+                "branches": [
+                    {
+                        "title": "设备操作",
+                        "branches": []
+                    },
+                    {
+                        "title": "应急",
+                        "branches": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "应急",
+        "branches": [
+            {
+                "title": "设备故障",
+                "branches": []
+            },
+            {
+                "title": "航空器特情",
+                "branches": []
+            },
+            {
+                "title": "升空物/无人机",
+                "branches": []
+            },
+            {
+                "title": "其他应急",
+                "branches": []
+            }
+        ]
+    },
+    {
+        "title": "其他类",
+        "branches": [
+            {
+                "title": "CCAR",
+                "branches": [
+                    {
+                        "title": "CCAR93",
+                        "branches": []
+                    },
+                    {
+                        "title": "其他规章",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "运行类",
+                "branches": [
+                    {
+                        "title": "换季",
+                        "branches": []
+                    },
+                    {
+                        "title": "培训",
+                        "branches": [
+                            {
+                                "title": "见习",
+                                "branches": []
+                            },
+                            {
+                                "title": "其他培训",
+                                "branches": []
+                            }
+                        ]
+                    },
+                    {
+                        "title": "试飞",
+                        "branches": []
+                    },
+                    {
+                        "title": "校飞",
+                        "branches": []
+                    },
+                    {
+                        "title": "低能见度",
+                        "branches": []
+                    },
+                    {
+                        "title": "雷雨",
+                        "branches": []
+                    },
+                    {
+                        "title": "运行文件",
+                        "branches": []
+                    }
+                ]
+            },
+            {
+                "title": "其他",
+                "branches": []
+            }
+        ]
+    }
+]
