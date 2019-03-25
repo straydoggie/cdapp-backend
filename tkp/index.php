@@ -13,12 +13,30 @@ if (!$action) {
     }
 }
 
-if ($action == 'get') {
-    getData();
-} else if ($action == 'add') {
-    if ($payload != null) {
-        addData($payload);
-    }
+switch ($action) {
+    case 'get':
+        # get library data
+        getData();
+        break;
+    case 'add':
+        # add new content to library
+        if ($payload != null) {
+            addData($payload);
+        } else {
+            echoerr($action, 'missing payload');
+        }
+        break;
+    case 'get_papers':
+        # get papers data
+        getPaperData();
+        break;
+    case 'add_to_papers':
+        # add new content to papers
+        break;
+    default:
+        # for unknow action
+        echoerr($action, 'unknow action');
+        break;
 }
 
 function getData()
@@ -33,6 +51,7 @@ function getData()
     }
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
 }
+
 function addData($payload)
 {
     $identifier = $payload['identifier'];
@@ -41,6 +60,29 @@ function addData($payload)
     echo $sql;
     db_exec($sql);
 }
+
+function getPaperData()
+{
+    $data = array();
+    $sql = 'SELECT * FROM tkplus_papers WHERE status >= 0 ORDER BY number DESC';
+    $res = db_exec($sql);
+    if (mysqli_num_rows($res) > 0) {
+        while ($row = mysqli_fetch_assoc($res)) {
+            array_push($data, array_merge_recursive(array('identifier' => $row['identifier']), json_decode($row['data'], true)));
+        }
+    }
+    echo json_encode($data, JSON_UNESCAPED_UNICODE);
+}
+
+function addPaperData($payload)
+{
+    $identifier = $payload['identifier'];
+    $data = json_encode(array_slice($payload, 1), JSON_UNESCAPED_UNICODE);
+    $sql = "INSERT INTO tkplus_papers (identifier, data) VALUES ('{$identifier}','{$data}')";
+    echo $sql;
+    db_exec($sql);
+}
+
 function db_exec($sql)
 {
     $dbhost = 'localhost';
@@ -61,4 +103,9 @@ function db_exec($sql)
     }
     mysqli_close($link);
     return null;
+}
+
+function echoerr($action, $information)
+{
+    echo 'error, action:' . $action . ': ' . $information . '!';
 }
