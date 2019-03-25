@@ -1,17 +1,5 @@
 <?php
-/*
- *{
- *   "identifier": "",
- *   "type": "",
- *   "content": [],
- *   "options": [],
- *   "answers":[],
- *   "author": "",
- *   "created": "",
- *   "updated": "",
- *   "keywords": []
- *}
- */
+
 header("Access-Control-Allow-Origin:*");
 header('Access-Control-Allow-Headers:x-requested-with,content-type');
 
