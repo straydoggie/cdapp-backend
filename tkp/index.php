@@ -30,8 +30,9 @@ switch ($action) {
         # get papers data
         getPaperData();
         break;
-    case 'add_to_papers':
+    case 'create_paper':
         # add new content to papers
+        createPaper($payload);
         break;
     default:
         # for unknow action
@@ -68,16 +69,32 @@ function getPaperData()
     $res = db_exec($sql);
     if (mysqli_num_rows($res) > 0) {
         while ($row = mysqli_fetch_assoc($res)) {
-            array_push($data, array_merge_recursive(array('identifier' => $row['identifier']), json_decode($row['data'], true)));
+            array_push($data, array_merge_recursive(
+                array(
+                    'identifier' => $row['identifier'],
+                    'status' => $row['status'],
+                ),
+                json_decode($row['data'], true)));
         }
     }
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
 }
 
-function addPaperData($payload)
+function createPaper($payload)
 {
     $identifier = $payload['identifier'];
-    $data = json_encode(array_slice($payload, 1), JSON_UNESCAPED_UNICODE);
+    $status = $payload['status'];
+    $data = array();
+    $misc;
+    foreach ($payload as $key => $value) {
+        if ($key == 'misc') {
+            $misc = $value;
+        } else if ($key != 'status' && $key != 'identifier') {
+            $data[$key] = $value;
+        }
+    }
+    $data = json_encode($data, JSON_UNESCAPED_UNICODE);
+    //$misc = json_encode($misc, JSON_UNESCAPED_UNICODE);
     $sql = "INSERT INTO tkplus_papers (identifier, data) VALUES ('{$identifier}','{$data}')";
     echo $sql;
     db_exec($sql);
